@@ -6,9 +6,9 @@ app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
   if (req.body.type === 'url_verification') {
-    return res.send(req.body.challenge);
+    return res.json({ challenge: req.body.challenge }); // <--- FIXED
   }
-  // If not a challenge, you can forward to Zapier here or do something else
+  
   console.log('Received event:', req.body);
   res.status(200).send('ok');
 });
