@@ -1,13 +1,14 @@
 {
   "name": "slack-challenge-responder",
   "version": "1.0.0",
-  "description": "Simple Slack challenge responder",
+  "description": "Simple server to handle Slack challenge verification",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "body-parser": "^1.20.2"
+    "body-parser": "^1.20.2",
+    "axios": "^1.6.7"  // <-- add this line
   }
 }
